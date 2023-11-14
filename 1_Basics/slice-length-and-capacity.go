@@ -2,29 +2,29 @@
 
 package main
 
-import "fmt"
-
 type Product struct {
 	Name     string
 	Quantity int
 }
 
-func main() {
-	products := []Product{
-		{"Apple", 1},
-		{"Banana", 2},
-		{"Milk", 3},
-	}
+// func main() {
+// 	products := []Product{
+// 		{"Apple", 1},
+// 		{"Banana", 2},
+// 		{"Milk", 3},
+// 	}
 
-	fmt.Printf("Длина: %d, Емкость: %d\n", len(products), cap(products))
+// 	fmt.Printf("Длина: %d, Емкость: %d\n", len(products), cap(products))
 
-	products = append(products, Product{"Meat", 4})
-	fmt.Printf("Длина: %d, Емкость: %d\n", len(products), cap(products))
+// 	products = append(products, Product{"Meat", 4})
+// 	fmt.Printf("Длина: %d, Емкость: %d\n", len(products), cap(products))
 
-	products = AddProduct(products, Product{"Ice Cream", 5})
-	fmt.Printf("Длина: %d, Емкость: %d\n", len(products), cap(products))
+// 	products = AddProduct(products, Product{"Ice Cream", 5})
+// 	fmt.Printf("Длина: %d, Емкость: %d\n", len(products), cap(products))
 
-}
+// 	fmt.Println("Конец программы")
+
+// }
 
 func AddProduct(products []Product, newProduct Product) []Product {
 	products = append(products, newProduct)
