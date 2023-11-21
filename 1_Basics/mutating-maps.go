@@ -14,25 +14,23 @@
 
 package main
 
-import "fmt"
-
 type Contact struct {
 	Name  string
 	Email string
 	Phone string
 }
 
-func main() {
-	contacts := map[string]Contact{}
-	fmt.Println(contacts)
+// func main() {
+// 	contacts := map[string]Contact{}
+// 	fmt.Println(contacts)
 
-	AddContact("Bulat", "bulat@mail.ru", "911", &contacts)
-	fmt.Println(contacts)
+// 	AddContact("Bulat", "bulat@mail.ru", "911", &contacts)
+// 	fmt.Println(contacts)
 
-	fmt.Println(FindContact("Bulat", contacts))
-	fmt.Println(FindContact("Denis", contacts))
+// 	fmt.Println(FindContact("Bulat", contacts))
+// 	fmt.Println(FindContact("Denis", contacts))
 
-}
+// }
 
 func AddContact(name, email, phone string, contactMap *map[string]Contact) {
 	(*contactMap)[name] = Contact{name, email, phone}
